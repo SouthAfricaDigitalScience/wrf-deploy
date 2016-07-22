@@ -42,3 +42,4 @@ export NETCDF=$NETCDF_DIR
 echo 35 | ./configure 
 # configure....
 #make -j 2
+echo hi
