@@ -39,6 +39,20 @@ fi
 tar xzf  ${SRC_DIR}/${SOURCE_FILE} -C ${WORKSPACE} --skip-old-files
 cd ${WORKSPACE}/WRFV3
 export NETCDF=$NETCDF_DIR
-echo 35 | ./configure 
+
+# Following http://www2.mmm.ucar.edu/wrf/OnLineTutorial/compilation_tutorial.php#STEP1
+# there are some tests which we can run to check if the build will go ok.
+
+mkdir -p BUILD_WRF TESTS
+# we do the fortran tests :
+cd TESTS
+wget http://www2.mmm.ucar.edu/wrf/OnLineTutorial/compile_tutorial/tar_files/Fortran_C_tests.tar
+tar xf Fortan_C_tests.tar
+gcc -c -m64 TEST_4_fortran+c_c.c
+gfortran -c -m64 TEST_4_fortran+c_f.f90
+gfortran -m64 TEST_4_fortran+c_f.o TEST_4_fortran+c_c.o
+
+
+echo 35 | ./configure
 # configure....
 #make -j 2
