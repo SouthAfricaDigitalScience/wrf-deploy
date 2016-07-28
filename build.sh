@@ -5,7 +5,7 @@ module add ci
 module add gcc/5.1.0
 module add  mpich/3.2-gcc-5.1.0
 module add netcdf/4.3.2-gcc-4.9.2-mpi-1.8.8
-hdf5/1.8.16-gcc-5.1.0-mpich
+module add hdf5/1.8.16-gcc-5.1.0-mpich
 
 # The source file is WRFV3.8.TAR.gz
 
