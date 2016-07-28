@@ -51,8 +51,8 @@ export NETCDF=$NETCDF_DIR
 mkdir -p BUILD_WRF TESTS
 # we do the fortran tests :
 cd TESTS
-wget http://www2.mmm.ucar.edu/wrf/OnLineTutorial/compile_tutorial/tar_files/Fortran_C_tests.tar
-tar xf Fortan_C_tests.tar
+wget http://www2.mmm.ucar.edu/wrf/OnLineTutorial/compile_tutorial/tar_files/Fortran_C_tests.tar -O Fortran_C_tests.tar
+tar xf Fortran_C_tests.tar
 gcc -c -m64 TEST_4_fortran+c_c.c
 gfortran -c -m64 TEST_4_fortran+c_f.f90
 gfortran -m64 TEST_4_fortran+c_f.o TEST_4_fortran+c_c.o
