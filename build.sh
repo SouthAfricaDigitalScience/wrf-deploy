@@ -61,3 +61,4 @@ gfortran -m64 TEST_4_fortran+c_f.o TEST_4_fortran+c_c.o
 echo 35 | ./configure
 # configure....
 #make -j 2
+echo hi
